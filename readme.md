@@ -56,3 +56,43 @@ int i = 0;
 - ../ : 현재 폴더에서 한 수준 위로 올라가는 폴더를 가리킴.
 
 
+### form 태그
+1. form 시작태그에 작성하는 속성
+```
+<form action = "주소값" method = "get or post">
+```
+    - action : form 태그에 작성된 내용을 전송 할 주소
+        - 보통 백엔드에서 받는 주소를 사용함.
+        - 백엔드에는 해당 주소를 처리해주는 컨트롤러 클래스의 메서드가 있음.
+
+    - method : action에 작성한 주소로 데이터를 전송할 때 사용할 전송방식
+        - 여기서 전송방식이라는 것은 http 프로토콜의 전송방식을 의미함.
+        - http 전송방식 _ rest api
+            - get : read 역할 (select)
+                - 주소창에 전송하는 데이터가 모두 노출 됨.
+                - 검색어 또는 데이터가 노출되어도 문제 없는 상황에서 사용
+            - post : create 역할 (insert)
+                - 주소창에 전송하는 데이터가 노출되지 않음.
+                - 회원가입, 로그인 등 노출되지 않아야 하는 상황에서 사용.
+            - put : update 역할 (update)
+            - delete : delete 역할 (delete)
+        - http(hyper text transfer protocol) : 인터넷 상에서 정보를 주고받는 프로토콜
+            - http는 대부분 요청(request) req /응답(response) res 이 있다.
+                - 보통 요청 : frontend (client) - > backend (server) / 응답 : backend(server) -> frontend (client)
+                    - client : html, css, javascript
+                    - server : java, db
+                - 우리가 인터넷을 한다는 것은 서버에 요청을 하는 것이고, 그에 대한 결과를 화면으로 보는 것이 응답이다.
+                - 따라서 인터넷을 할 때 주소창에 http://가 붙는 것이 이 이유이다.
+                    - https 는 s : secure(보안)이 추가됐다고 보면 된다.
+            - 프로토콜 : 특정 통신 방식에서 규정하는 규칙을 의미
+            - ftp, tcp, ip등에 붙는 p는 모두 프로토콜
+
+2. input tag
+- type 속성
+    - type: 텍스트 입력칸이 만들어짐, # input type text + name
+    - submit: from 태그에 작성한 내용을 action 속성에 작성한 주소로 보낼 수 있음
+
+- 네이버 검색창을 분석해보자
+    - 네이버 검색 요청 주소: search.naver
+    - 검색어를 담는 파라미터 이름: query
+    - 검색 요청 방식: get
