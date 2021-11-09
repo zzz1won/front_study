@@ -11,3 +11,13 @@
 ```
 int i = 0;
 ```
+
+1. git hub repository 생성
+1. 내 pc username, usermai 확인
+1. git으로 지정할 폴더 cmd 접속
+1. git init
+1. git remote add origin 'git hub repo 주소'
+1. 올릴 파일 지정
+    - git hub
+1. git commit -m '커밋메시지'
+1. git push origin main
