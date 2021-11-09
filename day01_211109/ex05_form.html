@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from tag</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <form action = "test" method="post"> 
+        <!-- method가 get일 때 
+            temp?aa=안녕 
+            test?bbb=바보
+            test?bbb=자바&ccc=DB-->
+        <!-- method가 post일 때
+        주소창에 내용이 비공개됨-->
+        <!-- placeholder-->
+
+        <!-- name 속성값 : 서버로 요청할 때 데이터를 담는 파라미터(변수) 이름 -->
+        입력 : <input type="text" name = "bbb" placeholder="검색어를 입력하세요 www">  <br>
+        입력 : <input type="text" name = "ccc"> <br>
+        입력 : <input type="text" name = "ddd"> <br>
+        <input type="submit" value="전송"> 
+    </form>
+</body>
+</html>
