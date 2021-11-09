@@ -42,15 +42,17 @@ int i = 0;
 
 
 ### 주로 사용하게 될 태그
+ ```
     - <style>, <script>, <h1>, <p>, <div>
     - <from>, <input>, <button>, <selcet>
+```
 
 ### UI / UX
-    - UI (user interface): 화면, GUI (graphical user interface). 얼마나 보기 좋은가
-    - UX (user experience): 사용자 경험, 얼마나 사용하기 좋은가
+- UI (user interface): 화면, GUI (graphical user interface). 얼마나 보기 좋은가
+- UX (user experience): 사용자 경험, 얼마나 사용하기 좋은가
 
 ### 경로 지정시 사용하는 방법
-    - ./ : 현재 파일이 있는 폴더를 가리킴.
-    - ../ : 현재 폴더에서 한 수준 위로 올라가는 폴더를 가리킴.
+- ./ : 현재 파일이 있는 폴더를 가리킴.
+- ../ : 현재 폴더에서 한 수준 위로 올라가는 폴더를 가리킴.
 
 
