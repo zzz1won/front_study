@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> table tag 연습 </title>
+    <style>
+        /* 여러개의 태그를 동시에 선택 할 때는 , 로 구분한다 */
+        table, th, tr, td   {
+            /* 두께, 선모양, 색깔
+                px : pixel */
+            border : 1px dashed sandybrown;
+            /* 선 합치기 */
+            border-collapse: collapse;
+        }
+
+        td {
+            /* 텍스트 중앙 정렬*/
+            text-align: center;
+        }
+        tr :nth-child(even)   {
+            background-color : royalblue;
+        }
+        tr :nth-child(odd)  {
+            background-color: springgreen;
+        }
+        tr :nth-child(1)    {
+            background-color: teal;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- table, tr, td, th, thead, tbody
+    tr : 새로운 행을 추가할 때
+    td : 새로운 열을 추가할 때
+    th : 열 제목
+
+    td colspan : 가로열 병합
+    td rowspan : 세로행 병합
+    -->
+    
+    <table>
+        <thead>
+        <tr>
+            <th>제목</th>
+            <th>열제목</th>
+            <th>컬럼제목</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>가1</td>
+            <td>가2</td>
+            <td colspan="3">와하하</td>
+            <td>가3</td>
+        </tr>
+        <tr>
+            <td>나1</td>
+            <td>나2</td>
+            <td rowspan="2">유후</td>
+            <td>나3</td>
+        </tr>
+        <tr>
+            <td>다1</td>
+        </tr>
+    </tbody>
+    </table>
+</body>
+</html>
