@@ -96,3 +96,16 @@ int i = 0;
     - 네이버 검색 요청 주소: search.naver
     - 검색어를 담는 파라미터 이름: query
     - 검색 요청 방식: get
+
+
+3. 이름을 일관성 있게
+- front 화면의 name 속성값, DTO 클래스 필드이름, DB 컬럼명을 모두 동일하게 가는 것이 정신건강에 좋다.
+
+
+4. CSS는 Bootstrap을 주로 이용할 계획
+
+
+
+##  front 2일차(20211110) - js
+1. js framework
+- react.js, node.js, vue.js~~
