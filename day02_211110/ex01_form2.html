@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from tag</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <form action = "test" method="get"> 
+        <!-- method가 get일 때 
+            temp?aa=안녕 
+            test?bbb=바보
+            test?bbb=자바&ccc=DB-->
+        <!-- method가 post일 때
+        주소창에 내용이 비공개됨-->
+        <!-- placeholder-->
+
+        <!-- name 속성값 : 서버로 요청할 때 데이터를 담는 파라미터(변수) 이름 -->
+        입력 : <input type="text" name = "bbb" placeholder="검색어를 입력하세요 www">  <br>
+        입력 : <input type="text" name = "ccc"> <br>
+        입력 : <input type="text" name = "ddd"> <br>
+        
+        <!-- select -->
+        국가 : <select name = ' nation'>
+            <option selected> 선택하세요 </option>
+            <option value = "korea"> 대한민국 </option>
+            <option value = "usa"> 미국 </option>
+            <option value = "canada"> 캐나다 </option>
+            <option value = "india"> 인도 </option><br>
+            http://127.0.0.1:5500/day02_211110/test?bbb=1&ccc=2&ddd=7&+nation=korea
+</select><br>
+        메일 : <input type="text" name = "email"@ placeholder=" 메일주소"> @ <input type="text">
+            
+        <select name = 'mail'>
+            <option selected > 도메인 선택 </option>
+            <option value="naver"> naver.com </option>
+            <option value="daum"> hanmail.net </option>
+            <option value="kakao"> kakao.com </option>
+            <option value="nate"> nate.com </option>
+            <option value="yahoo"> yahookorea.com </option>
+        </select><br>
+        <br>
+
+        <!-- label tag : 텍스트를 선택했을 때 편리한 선택이 가능...-->
+        <!-- 장문의 글을 쓸 필요가 있을 때 : textarea -->
+            <textarea name="contents" cols="30" rows="10"></textarea>
+            <br>
+        <!-- 비밀번호 입력할 때 암호화 -->
+            비밀번호 : <input type="password" name = "pwd" > <br>
+
+        <!-- radio 버튼 -->
+        <!-- 똑같은 코드 복붙하고싶을땐 alt + shift + ↓ -->
+        <!-- 중복선택 불가. name은 꼭 같은걸로 써야함.-->
+        가입유형:
+        <input type="radio" id = "p" name = "jointype" value="personal">
+        <label for = "p"> 개인 </label>
+        <input type="radio" id = "c" name = "jointype" value="commercial"> <label for = "c"> 사업자 </label>
+        <input type="radio" id = "n" name = "jointype" value="none"> <label for = "n"> 해당없음 </label>
+        <input type="submit" value="전송"> 
+        <br>
+
+        <!-- checkbox : 중복선택 가능 -->
+        <!-- 배열로 넘어간다. name은 꼭 같은걸로 써야함.-->
+        활용가능 언어 :
+        <input type="checkbox" name = "lang" value="java"> 자바
+        <input type="checkbox" name = "lang" value="MySQL"> MySQL
+        <input type="checkbox" name = "lang" value="HTML"> HTML
+        <input type="checkbox" name = "lang" value="Python"> Python
+        <br>
+
+        생일:
+        <input type="date" name = "birth">
+        <br>
+
+        
+    </form>
+</body>
+</html>
