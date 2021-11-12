@@ -109,3 +109,42 @@ int i = 0;
 ##  front 2일차(20211110) - js
 1. js framework
 - react.js, node.js, vue.js~~
+
+
+##  front 3일차(20211110) - js
+1. javascript function
+- 함수 (자바의 메소드와 비슷...)
+- 특정 기능을 수행하는 코드 블록
+- 호출을 해줘야 실행이 됨.
+- 특정 이벤트가 발생했을 때 함수를 호출
+    - 특정이벤트란...
+        - click, duobleclick, mouse over, writing, keyup, keydown
+- 매개변수, 리턴 등이 있음.
+
+2. id속성 / class속성
+- id속성
+    - css 적용할 때 많이 사용, javaScript에서 제어할 때도 사용
+    - 한 문서 안에서 id 속성값은 유일해야한다.
+- class속성
+    - css 적용할 때 많이 사용함.
+    - 여러 태그에 동일한 class 값을 적용할 수 있다.
+    - 한번에 여러 class를 동시에 적용할 수 있다.
+        - ex) p태그에 class1, class2, class3를 동시에 적용하고 싶다면
+        ```
+        <p class = "class1 class2 class3"></p>
+        ```
+
+
+3. DOM 가져오기
+- 대부분 document. 으로 시작함.
+    - document는 현재 html 문서를 가리킴.
+- getElementById('id속성값')
+    - 현재 html에 작성된 태그 중 특정 id속성값을 가지고 있는 요소를 가져옴.
+- querySelector()
+    - id, class, 태그 등 여러 요소를 가져올 수 있음.
+    - id를 가져올 때는 id 앞에 #을 붙여야 함.
+        - ex) id1  이라는 요소를 가져온다면 document.querySelector('#id1')
+    - class를 가져올 때는 class 앞에 . 을 붙여야 함.
+        - ex) class1 이라는 요소를 가져온다면 document.querySelector(',class')
+- getElementsByClassName()
+    - 현재 html에 작성된 태그 중 특정 class속성값을 가지고 있는 요소를 가져옴.
