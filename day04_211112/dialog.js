@@ -17,6 +17,7 @@ btn1.addEventListener('click',function(){
         }  else {
             console.log('취소')
         }
+        // 가져다 대보면 bool타입으로 리턴되는걸 확인할 수 있다.
 });
 
 
@@ -34,4 +35,7 @@ function alertFuntion () {
 
 function promptFuntion ()    {
     console.log("PromptFunction 함수호출 됨");
+    const result = prompt ("프롬프트 함수입니다.");
+    console.log(result);
+
 }
