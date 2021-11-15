@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script scr = "./ex01_script.js" defer></script> -->
+</head>
+<body>
+    <!-- onkeyup : 키보드를 떼는순간 함수 호출
+        onkeydown : 키보드를 누르는 순간 함수 호출
+        onblur : 포커스를 잃었을 때, 클릭했던 커서를 다른쪽으로 옮겼을때 호출 -->
+    <!-- onkeyup방식 -->
+    <!-- 인사말1 : <input type = "text" id = id1 onkeyup="fun1()"> <br> -->
+    <!-- 인사말2 : <input type = "text" id = id2 onblur="fun2()"> <br>
+    인사말3 : <input type = "text" id = id3> <br>
+    <button onclick = "fun3()"> 작성 </button> -->
+
+    <!-- addEventListener 방식-->
+    인사말1 : <input type = "text" id = id1> <br>
+    인사말2 : <input type = "text" id = id2> <br>
+    인사말3 : <input type = "text" id = id3 value="input에 value를 쓰면 이런 느낌"> <br>
+    <button id = "btn1"> 작성 </button>
+</body>
+<script>
+    const input1 = document.getElementById('id1');
+    input1.addEventListener('keyup', fun1);
+    
+    function fun1() {
+        console.log ('함수호출');
+        const ele = document.getElementById ('id1');
+        console.log(ele.value);
+    }
+    // value : input 태그에 작성이 된 내용
+    
+    const input2 = document.getElementById('id2');
+    input2.addEventListener('blur', fun2);
+    
+    function fun2() {
+        console.log ('onblur');
+        const ele = document.getElementById ('id2');
+        console.log(ele.value);
+    }
+    
+    const btn1 = document.getElementById('id3');
+    btn1.addEventListener('click', fun3);
+function fun3() {
+    const ele = document.getElementById ('id3');
+    // console.log(ele.value);
+    // ele.value = '이 내용은 어디에 나올까요?'
+    // ↑ value를 채워준다...
+
+    const text = '히히히히';
+    ele.value = text;
+}
+</script>
+</html>

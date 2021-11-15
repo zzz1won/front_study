@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email</title>
+
+    <script>
+
+        function eMail()    {
+            const domain = document.getElementById('mail');
+            console.log(domain.value);
+            
+            // select 에서 선택한 값을 input tag 에 출력
+            const myMail = document.getElementById('myMail');
+            myMail.value = (mailId.value) + '@' + (domain.value);
+        }
+
+    </script>
+</head>
+<body>
+    <!-- 이메일 폼을 만들어봅시다, 도메인을 선택하면 선택값이 input에 나오도록! -->
+    <input type="text" id = 'mailId'>
+    @ <select id = mail onchange="eMail()">
+    <option > 도메인 선택 </option>
+    <option value = 'naver.com'>naver.com</option>
+    <option value = 'daum.net'>daum.net</option>
+    <option value = 'nate.com'>nate.com</option>
+    <option value = 'yahookorea.kr'>yahookorea.kr</option>
+    </select><br>
+
+    메일주소: <input type = "text" id = 'myMail'>
+    
+</body>
+</html>

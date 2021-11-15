@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>덧셈출력페이지 - 개인실습1</title>
+</head>
+<body>
+    숫자1: <input type="text" id = num1><br>
+    숫자2: <input type="text" id = num2><br><p></p>
+    <p id = 'result'> 여기에 결과를 출력 </p>
+    <button onclick = 'cal()'>덧셈계산</button><br><p>
+    <!-- console.log = (ment1);     -->
+    <p>처음 덧셈을 해보면 이상할겁니다.<br>
+    계산할 변수의 타입을 확인해보고 정수로 변환하는 방법은 구글로 찾아봅시다.</p><br>
+
+
+    
+</body>
+<script>
+    // let ment1 = ('여기에 결과를 출력');
+
+    // let input1 = document.getElementById('id1');
+    // input1.addEventListener('blur', fun1);
+
+    // function fun1() {
+    //     console.log('숫자1 기록');
+    //     let ele1 = document.getElementById('id1');
+    //     console.log(ele1.value);
+    // }
+
+    // let input2 = document.getElementById('id2');
+    // input2.addEventListener('blur', fun2);
+
+    // function fun2() {
+    //     console.log('숫자2 기록');
+    //     let ele2 = document.getElementById('id2');
+    //     console.log(ele2.value);
+    // }
+
+    // function sum1() {
+    //     fun1 + fun2 === sum1;
+    //     console.log(sum1);
+    //     let ele3 = document.getElementById('id3');
+    //     ele3.innerHTML = sum1;
+    //     }
+
+    function cal()  {
+        let num1 = document.getElementById('num1').value;
+        let num2 = document.getElementById('num2').value;
+        console.log(typeof(num1));
+        console.log(typeof(num2));
+        //String => number 형번환
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        console.log(typeof(num1));
+        console.log(typeof(num2));
+        const sum = num1 + num2;
+        console.log(sum);
+        
+        const result = document.getElementById('result');
+        result.innerHTML = sum;
+    }
+</script>
+</html>

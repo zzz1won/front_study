@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function idCheck()  {
+            /*  1. 입력한 아이디값을 저장/가져오기
+                2. 입력한 값을 검증(입력한게 있는지, 글자수 체크)
+                3. 검증 결과에 따른 안내 메세지 출력
+            */
+            const idValue = document.getElementById('id').value;
+            const idCheckResult = document.getElementById('idCheckResult');
+
+           console.log('입력id: ', idValue);
+        //    console.log(idValue.length);
+           const idlength = idValue.length;
+           if (idlength ==0)    {
+               console.log('필수항목입니다.');
+               idCheckResult.innerHTML ='필수항목입니다.';
+               idCheckResult.style.color = 'red';
+            //    idmessage.innerHTML = '필수항목입니다.';
+            } else if(5 > idlength || idlength > 20) {
+                console.log('5-20자 이내로 작성해주세요');
+                idCheckResult.innerHTML ='5-20자 이내로 작성해주세요';
+                idCheckResult.style.color = 'red';
+                //    let idmessage = document.getElementById('idmessage');
+                //    idmessage.innerHTML = '5-20자 이내로 작성해주세요';
+            } else{
+                console.log('멋진 아이디네요!');
+                idCheckResult.innerHTML ='멋진아이디네요!';
+                idCheckResult.style.color = 'green';
+            //    let idmessage = document.getElementById('idmessage');
+            //    idmessage.innerHTML = '멋진 아이디네요!';
+           }
+
+        }
+    </script>
+</head>
+<body>
+    
+    아이디 : <input type="text" id = "id" onblur="idCheck()" maxlength = "20"><br>
+    <span id = "idCheckResult"></span>
+    <!-- <p id = 'idmessage'>  </p> -->
+</body>
+</html>

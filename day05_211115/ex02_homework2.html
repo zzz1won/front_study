@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적관리 - 개인실습2</title>
+</head>
+    <script>    
+        function cal1() {    //입력한 점수를 가져옴
+            // const score = document.getElementById('score');
+            // console.log(score);
+            const scoreValue = document.getElementById('score').value;
+            console.log(scoreValue);
+
+            let grade;
+            if(scoreValue>=90){
+                grade = 'a';
+            } else if(scoreValue>=80){
+                grade = 'b';
+            } else if(scoreValue>=70){
+                grade = 'c';
+            } else if(scoreValue>=60){
+                grade = 'd';
+            } else {
+                grade = 'f';
+            }
+
+            //grade변수값을 id = result 부분에 출력
+            const result = document.getElementById('result');
+            result.innerHTML = grade;
+
+            //grade변수값을 id = grade 부분에 출력
+            const output = document.getElementById('grade');
+            output.value = grade;
+        }
+
+    </script>
+    
+<body>
+    점수 : <input type = "text" id = "score" > <br>
+    성적 : <input type = "text" id = "grade" value = '성적계산을 눌러주세요'> <br><p></p>
+    <button onclick = 'cal1()'>성적계산</button><p></p>
+    <p id = "result"> 성적출력</p>    
+</body>
+
+</html>
