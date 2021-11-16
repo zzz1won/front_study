@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 자식요소에 대한 위치를 지정할 때는 부모요소에 
+            position: relative를 반드시 지정해야 부모요소 안에서 위치를 잡을 수 있음*/
+         
+        .wrap   {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(102, 190, 224);
+            position: relative;
+        }    
+
+        .container {
+            width: 300px;
+            background-color: #148777;
+            position: relative;
+            /*요게 없으면 도큐 전체를 돌아다님 */
+        }
+        .container .item    {
+            width: 300px;
+            border: 3px dashed palevioletred;
+            background-color:rebeccapurple;
+            color: sandybrown;
+        }
+
+        /*새로운 선택방법*/
+        .container .item:nth-child(1)   {
+            width: 100px;
+            height: 100px;
+        }
+        .container .item:nth-child(2)   {
+            width: 140px;
+            height: 70px;
+            /* ㅇ0ㅇ??? absolute_절댓값 : 특정 위치를 차지하게끔 지정하는...? 먼소리지!? */
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </div>
+
+</body>
+</html>

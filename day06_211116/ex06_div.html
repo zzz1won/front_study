@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 10px;
+        }
+        .parant {
+            width: 300px;
+            height: 400px;
+            background-color: darksalmon;
+            font-size: 20px;
+        }
+        /*부모-자식 관계, 자식태그의 너비 따로 지정하지않으면 부모값을 따른다.*/
+        .child  {
+            /* width: 10em; */
+            /* 10em = 부모em의 10배 = 200px*/
+            width: 10rem;
+            /* 10rem = html의 10배 = 160px*/
+            height: 100px;
+            background-color:darkslateblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="parant">
+       
+        <div class="child">
+
+        </div>
+        
+    </div>
+</body>
+</html>
