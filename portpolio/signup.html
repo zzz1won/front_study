@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel = 'stylesheet' href = '../bootstrab/bootstrap.css'> -->
+    <style>
+        input {
+        display: block;    
+        width: 300px;
+        height: 30px;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 0.25rem;
+        border: 1px solid rgb(203, 130, 212);
+        }
+
+    /* #id {
+        width: 300px;
+        height: 40px;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 0.25rem;
+        border: 1px solid rgb(203, 130, 212);
+    }
+
+    #pw {
+        width: 300px;
+        height: 40px;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 0.25rem;
+        border: 1px solid rgb(203, 130, 212);
+    }
+    #pw2 {
+        width: 300px;
+        height: 40px;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 0.25rem;
+        border: 1px solid rgb(203, 130, 212);
+    } */
+
+    #userName {
+        width: 300px;
+        height: 40px;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 0.25rem;
+        border: 1px solid rgb(203, 130, 212);
+    }
+
+    #phone  {
+        width: 300px;
+        height: 40px;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 0.25rem;
+        border: 1px solid rgb(203, 130, 212);
+    }
+
+    #mailAddress   {
+        display:ruby-text;
+        width: 180px;
+        height: 40px;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 0.25rem;
+        border: 1px solid rgb(203, 130, 212);
+    }
+    </style>
+    <script>
+        function idCheck()  {
+            /* 정규식 선언 */
+            
+            const exp1 = /^(?=.*[a-z])(?=.*\d)(?=.*[-_])[a-z\d-_]{6,12}$/;
+            const id = document.getElementById('id').value;
+            const idLength = id.length;
+            console.log('id길이값:',idLength);
+            const idComment = document.getElementById('idComment');
+
+            if (idLength == 0){
+                idComment.innerHTML = '필수 정보입니다.';
+                idComment.style.color = 'red';
+            }   else if (!id.match(exp1)) {
+                idComment.innerHTML = '6~12자 영문소문자, 숫자, -_를 이용해 만들어주세요.';
+                idComment.style.color = 'red';
+            }   else    {
+                idComment.innerHTML = '사용가능한 ID입니다.'
+                idComment.style.color = 'violet';
+            }
+        }
+    /* 비밀번호, 체크함수 */
+        function pwCheck()  {
+
+            const exp1 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[-_!@])[a-zA-Z\d-_!@]{6,15}$/
+            const pw = document.getElementById('pw').value;
+            const pwComment = document.getElementById('pwComment');
+            const pwLenth = pw.length;
+            console.log('pw길이값:',pwLenth);
+
+            if(pwLenth==0)  {
+                pwComment.innerHTML = '필수 입력사항입니다.'
+                pwComment.style.color = 'red';
+            } else if (!pw.match(exp1)) {
+                pwComment.innerHTML = '띄어쓰기 없는 6~15자의 영문 대/소문자, 숫자 또는 특수문자조합(-_!@)으로 입력하셔야 합니다.'
+                pwComment.style.color = 'red';
+            }   else    {
+                pwComment.innerHTML = '확인되었습니다.'
+                pwComment.style.color = 'violet';
+            }
+        }
+
+        function pwCheck2() {
+            const pw = document.getElementById('pw').value;
+            const pw2 = document.getElementById('pw2').value;
+            const pwResult = document.getElementById('pwResultComment');
+
+            if (pw == pw2)  {
+                pwResult.innerHTML = '(*^▽^*) 확인되었습니다.'
+                pwResult.style.color = 'violet'; 
+            }   else    {
+                pwResult.innerHTML = 'ಥ_ಥ 비밀번호가 일치하지않습니다.'
+                pwResult.style.color = 'red'; 
+            }
+        }
+
+        /* 이름입력 */
+        function nameCheck()    {
+            // const exp2 = /^(?=.*[가-힣])(?=.*[a-z])[가-힣a-z]{2,15}$/;
+            const exp2 = /[가-힣]{2,5}/;
+            const name = document.getElementById('userName').value;
+            const nameComment = document.getElementById('nameComment');
+            const nameLength = name.length;
+
+            if (nameLength == 0)    {
+                nameComment.innerHTML = '필수 입력사항입니다.';
+                nameComment.style.color = 'red';
+            }   else if (!name.match(exp2))  {
+                nameComment.innerHTML = '5자 이내의 한글만 기입해주세요.';
+                nameComment.style.color = 'red';
+            }   else    {
+                nameComment.innerHTML = '확인되었습니다.';
+                nameComment.style.color = 'violet';
+            }
+        }
+
+        /* 번호 확인 */
+        function phoneCheck()   {
+            const phone = document.getElementById('phone').value;
+
+        }
+    </script>
+</head>
+<body>
+    <!-- 아이디체크 생성 -->
+    <input type="text" id = 'id' onblur="idCheck()" placeholder="ID를 만들어주세요">
+    <span id='idComment'></span><br><br>
+    
+    <!-- 비번체크 생성 -->
+    <input type="text" id = 'pw' onblur="pwCheck()" placeholder="비밀번호 입력">
+    <span id='pwComment'></span><br>
+    <input type="text" id = 'pw2' onkeyup="pwCheck2()" placeholder="위의 비밀번호를 다시 입력해주세요.">
+    <span id='pwResultComment'></span><br><br>
+
+    <!-- 이름 -->
+    <input type="text" id = 'userName' onblur="nameCheck()" placeholder="이름">
+    <span id='nameComment'>이름결과</span><br><br>
+
+    <!-- 휴대폰 입력 -->
+    <input type="text" id='phone' onblur="phoneCheck()" placeholder="휴대폰번호 입력">
+    <span id='phoneComment'>번호입력결과</span><br><br>
+
+    <!-- 이메일 입력 -->
+    <input type="text" id='mailAddress' onblur="mailbase()" placeholder="이메일">
+    <select> 1111
+        <option disabled> 도메인 선택 </option>
+        <option value="naver.com">네이버</option>
+        <option value="gmail.com">지메일</option>
+        <option value="hanmail.net">다음</option>
+    </select>
+    
+
+
+</body>
+</html>
